@@ -94,6 +94,7 @@ relationship OneToOne {
 	Client{Plan} to Plan,
     Client{address} to Address
     Client{User} to User,
+    User to Video{user},
     Plan{PlanOptions} to PlanOptions
 }
 
@@ -102,7 +103,6 @@ relationship OneToMany {
     Company to User{company},
     Company to AfterEffectsTemplate{company},
     AfterEffectsTemplate to Video{afterEffectsTemplate},
-    User to Video{user},
     Category to AfterEffectsTemplate{category}
     AfterEffectsTemplateFields to AfterEffectsTemplate
 }
