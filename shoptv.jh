@@ -19,6 +19,7 @@ entity Company {
 }
 
 entity AfterEffectsTemplate {
+	userId String,
 	templateFile AnyBlob,
     templateName String,
     templateDuration String,
@@ -44,6 +45,7 @@ entity Category {
 }
 
 entity Video {
+	userId String,
     videoName String,
     videoDuration String,
     videoSize String,
@@ -94,7 +96,6 @@ relationship OneToOne {
 	Client{Plan} to Plan,
     Client{address} to Address
     Client{User} to User,
-    User to Video{user},
     Plan{PlanOptions} to PlanOptions
 }
 
