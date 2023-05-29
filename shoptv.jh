@@ -94,7 +94,7 @@ relationship OneToOne {
 	Client{Plan} to Plan,
     Client{address} to Address
     Client{User} to User,
-    User to Video{user},
+    Video to User{Video},
     Plan{PlanOptions} to PlanOptions
 }
 
